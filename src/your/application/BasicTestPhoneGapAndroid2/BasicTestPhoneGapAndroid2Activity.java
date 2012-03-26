@@ -9,6 +9,10 @@ public class BasicTestPhoneGapAndroid2Activity extends DroidGap {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        super.loadUrl("file:///android_asset/www/index.html");
+        //Set Splash Screen
+        super.setIntegerProperty("splashscreen", R.drawable.splash);
+        //Load Webview for PhoneGap/Cordova
+        //Force splash screen to show 5000 ms
+        super.loadUrl("file:///android_asset/www/index.html", 5000);
     }
 }
